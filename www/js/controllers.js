@@ -21,3 +21,14 @@ angular.module('myApp.controllers', [])
     .controller('ReportListCtrl', ['$scope', '$routeParams', 'Report', function ($scope, $routeParams, Report) {
         $scope.employees = Report.query({employeeId: $routeParams.employeeId});
     }]);
+    .controller('ngStorageCtrl', function($scope, $localStorage) {
+        $scope.save = function(checkValue, employeeId) {
+            $localStorage.employeeId = checkValue;
+        }
+
+        $scope.load = function(employeeId) {
+            $scope.attendanceData = $localStorage.employeeId;
+        }
+
+
+    });

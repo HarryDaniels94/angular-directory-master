@@ -1,6 +1,7 @@
 'use strict';
 
 angular.module('myApp', [
+	'ngStorage',
     'ngTouch',
     'ngRoute',
     'ngAnimate',
