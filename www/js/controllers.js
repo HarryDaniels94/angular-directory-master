@@ -23,7 +23,14 @@ angular.module('myApp.controllers', [])
     }]);
     .controller('ngStorageCtrl', function($scope, $localStorage) {
         $scope.save = function(checkValue, employeeId) {
-            $localStorage.employeeId = checkValue;
+            if (checkValue === "Attending") {
+
+                $localStorage.employeeId = "Not Attending";
+            }
+            else {
+                
+                $localStorage.employeeId = "Attending";
+            }
         }
 
         $scope.load = function(employeeId) {
