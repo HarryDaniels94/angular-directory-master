@@ -10,14 +10,11 @@
 </div>
 
 <div class='details' ng-controller="ngStorageCtrl">
-    <script>load(employee.id)</script>
     <img ng-src="pics/default_picture.jpg" class="employee-image">
     <h1>{{employee.firstName}} {{employee.lastName}}</h1>
        <div class="topcoat-list__container scroller">
         <ul class="topcoat-list list actions">
-
-            <li class="topcoat-list__item" ng-show="employee.currentAttendance"><a href="" ng-click="save(attendance, employee.id)"><p>Current Attendance</p><p ng-model"attendance">{{attendanceData}}</p><div class="action-icon icon-mail"/></a></li>
-            
+          
             <li class="topcoat-list__item" ng-show="employee.officePhone"><a href="tel:{{employee.officePhone}}"><p>Call Office</p><p>{{employee.officePhone}}</p><div class="action-icon icon-call"/></a></li>
             
             <li class="topcoat-list__item" ng-show="employee.email"><a href="mailto:{{employee.email}}"><p>Email</p><p>{{employee.email}}</p><div class="action-icon icon-mail"/></a></li>
